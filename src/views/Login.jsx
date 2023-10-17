@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Login(){
     return(
         
@@ -53,7 +55,10 @@ export default function Login(){
             </form>
         </div>
         <nav className="w-full flex justify-start my-1">
-            <a href="/auth/registro">¿Aún no tienes una cuenta?,  <span className="font-semibold"> Registrate ahora.</span></a>
+            <Link to="/auth/registro">
+            ¿Aún no tienes una cuenta?,  
+            <span className="font-semibold"> Registrate ahora.</span>
+            </Link>
         </nav>
     </>
     )

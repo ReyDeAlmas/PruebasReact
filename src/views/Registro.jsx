@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Registro() {
     return (
         <>
@@ -73,7 +75,10 @@ export default function Registro() {
             </div>
 
             <nav className="w-full flex justify-start my-1">
-             <a href="/auth/login">¿Ya tienes una cuenta?,  <span className="font-semibold"> Inicia sesión.</span></a>
+             <Link to="/auth/login">
+              ¿Ya tienes una cuenta?,  
+             <span className="font-semibold"> Inicia sesión.</span>
+             </Link>
             </nav>
         </>
     )
