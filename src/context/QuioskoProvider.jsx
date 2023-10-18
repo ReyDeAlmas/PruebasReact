@@ -27,30 +27,25 @@ const QuioskoProvider = ( {children} ) => {
 
     const handleClickAlert = producto => {
 
-        // MySwal.fire({
-        //     html: 
-        //     <ModalProducto
-        //         key={producto.imagen}
-        //         producto={producto}
-        //     >
+        MySwal.fire({
+            showConfirmButton: false,
+            html: 
+            <ModalProducto
+                key={producto.imagen}
+                producto={producto}
+                MySwal={MySwal}
+            >
                
-        //     </ModalProducto>
-        //    ,
-        //      width: '70vw',
-        //      customClass: 'modal-max-width-500',
-        //      buttonsStyling: false,
-        //   })
+            </ModalProducto>
+           ,
+             width: '70vw',
+             customClass: 'modal-max-width-500',
+             
+             
+          })
           
 
-        MySwal.fire({
-            title: <p>Hello World</p>,
-            didOpen: () => {
-              // `MySwal` is a subclass of `Swal` with all the same instance & static methods
-              MySwal.showLoading()
-            },
-          }).then(() => {
-            return MySwal.fire(<button type="button" onClick={() => MySwal.clickConfirm()} >Shorthand works too</button>)
-          })
+       
     }
 
     const handleSetProducto = producto => {
